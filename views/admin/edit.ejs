@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="container">
+        <h1><%= title %></h1>
+        <form action="/admin/update/" method="post" >
+            <input type="hidden" name='id' value='<%=postData._id %>'>
+            <div class="form-group row">
+              <label for="title" class="col-sm-2 col-form-label">Title</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control" name="title" value='<%=postData.title %>'>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="Short Description" class="col-sm-2 col-form-label">Short Description</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control" name="sDesc" value='<%=postData.sDesc %>'>
+              </div>
+            </div>
+            <div class="form-group row">
+                <label for="Long Description" class="col-sm-2 col-form-label">Long Description</label>
+                <div class="col-sm-5">
+                    <textarea class="form-control" rows="5" name="lDesc" value='<%=postData.lDesc %>'></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary button4">update</button>
+              </div>
+          </form>
+    </div>
+</body>
+</html>

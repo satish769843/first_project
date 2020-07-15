@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/b902bfa82b.js" crossorigin="anonymous"></script>
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="container mt-3">
+        <h1><%= title %></h1>
+        <a href='/admin/add-post/' class="btn btn-primary mb-3">Add Post</a>
+        <%- include('postData.ejs') %>
+    </div>
+</body>
+</html>
